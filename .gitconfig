@@ -1,3 +1,5 @@
 [user]
-	email = docker@onztv.com
+	email = docker@cobjet.com
 	name = docker
+[push]
+	default = simple
