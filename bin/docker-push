@@ -1,0 +1,6 @@
+IMAGES=`docker images | grep clouderg | awk '{ print $1 }'`
+
+for image in $IMAGES; do
+  echo "upload $image to dockerhub"
+  docker push $image &
+done

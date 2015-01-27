@@ -1,0 +1,8 @@
+.cache
+.vim
+.viminfo
+.vimshell
+.bash_history
+github
+tmp
+log

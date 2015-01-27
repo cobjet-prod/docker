@@ -1,0 +1,6 @@
+IMAGES=$(docker search clouderg)
+
+for image in ${IMAGES}; do
+  echo "pull $image from dockerhub"
+  docker pull "${image}" &
+done
