@@ -1,5 +1,5 @@
 FROM clouderg/meanstack
-MAINTAINER docker@clouderg.com
+MAINTAINER admin@cobjet.com
 
 # Install Haproxy.
 RUN \
