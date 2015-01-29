@@ -24,6 +24,6 @@ add	  haproxy.cfg /etc/haproxy/haproxy.cfg
 # Define additional metadata for our image.
 VOLUME ["/var/log/supervisor", "/etc/supervisor/conf.d", "/usr/local", "/data", "/haproxy-override", "/home/devops", "/home/www" ]
 
-expose  8000 4430
+expose  8888 4430
 cmd	["/usr/local/bin/rootcron", "&"]
 cmd ["/usr/bin/supervisord", "-n"]
