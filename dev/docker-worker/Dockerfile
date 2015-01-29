@@ -25,5 +25,4 @@ add	  haproxy.cfg /etc/haproxy/haproxy.cfg
 VOLUME ["/var/log/supervisor", "/etc/supervisor/conf.d", "/usr/local", "/data", "/haproxy-override", "/home/devops", "/home/www" ]
 
 expose  8888 4430
-cmd	["/usr/local/bin/rootcron", "&"]
 cmd ["/usr/bin/supervisord", "-n"]
