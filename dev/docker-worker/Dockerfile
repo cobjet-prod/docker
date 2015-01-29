@@ -5,13 +5,17 @@ MAINTAINER admin@cobjet.com
 RUN \
   sed -i 's/^# \(.*-backports\s\)/\1/g' /etc/apt/sources.list && \
   apt-get update && \
-  apt-get install -y haproxy git software-properties-common python-software-properties || true
+  apt-get install -y haproxy git nodejs software-properties-common python-software-properties || true
 
 run  sed -i 's/^ENABLED=.*/ENABLED=1/' /etc/default/haproxy && \
      rm -rf /var/lib/apt/lists/*
 
 run	sed -i 's/var\/www/home\/www/' /etc/passwd
 run	chsh -s /bin/bash www-data
+
+run npm install -g forever
+run npm install -g nodemon
+run npm install -g server
 
 run	( cd /home;git clone https://github.com/cobjet-worker/www.git;chown -R www-data: www )
 run	( cd /home/www;git clone https://github.com/cobjet-worker/nodeapp.git;chown -R www-data: nodeapp )
