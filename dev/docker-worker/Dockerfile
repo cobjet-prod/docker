@@ -22,7 +22,7 @@ add	  haproxy.cfg /etc/haproxy/haproxy.cfg
 
 
 # Define additional metadata for our image.
-VOLUME ["/var/log/supervisor", "/etc/supervisor/conf.d", "/usr/local", "/data", "/haproxy-override", "/home/devops", "/home/www" ]
+VOLUME ["/var/log/supervisor", "/etc/supervisor/conf.d", "/usr/local", "/data", "/haproxy-override", "/home/devops", "/home/docker", "/home/www/nodeapp"]
 
 expose  8888 4430
 cmd ["/usr/bin/supervisord", "-n"]
